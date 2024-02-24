@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Kolker+Brush&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: antiquewhite;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+    margin: 3rem;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-gap: 10px;
+}
+
+.cell {
+    background: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  font-family: "Kolker Brush", cursive;
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 100px;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 15px;
+}
+
+dialog {
+    background: rgb(255, 227, 156);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+    padding: 2rem;
+    margin: auto;
+    border: none;
+    border-radius: 15px;
+
+    & button {
+        background: rgb(245, 197, 74);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    #board {
+        grid-template-columns: repeat(3, 100px);
+        gap: 5px;
+    }
+
+    .cell {
+        width: 100px;
+        height: 100px;
+    }
+}
