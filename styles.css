@@ -61,6 +61,10 @@ dialog {
   }
 }
 
+dialog::backdrop {
+  backdrop-filter: blur(5px);
+}
+
 @media only screen and (max-width: 1024px) {
   #board {
     grid-template-columns: repeat(3, 100px);
